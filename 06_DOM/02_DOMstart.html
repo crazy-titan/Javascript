@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: #414141;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent') // first class parent name ka show kar dega
+    // console.log(parent); //everything inside parent
+    // console.log(parent.children); //HTML collection of child
+    // console.log(parent.children[2]);//HTML collection is similar like array but not equall
+
+    // console.log(parent.children[1].innerHTML);
+    //  so we can apply loops by converting the HTML collection into array
+    // but we can use our classic for loop here as this is similar to array
+    // for (let i = 0; i < parent.children.length; i++) { // becz parent.children is giving the HTML collection
+    // console.log(parent.children[i]);
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild); 
+    // }
+    
+    // now go opposite from children to parent
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); // .parent 
+    // console.log(dayOne.parentElement.children);// same as previous HTML collection
+    // console.log(dayOne.nextElementSibling);//next brother of .parent
+    console.log("NODES",parent.childNodes); // how many nodes are there in parent , answer is not 4, (space,text,etc)
+    
+</script>
+
+</html>
