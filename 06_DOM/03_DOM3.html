@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div style ="background-color:red; color:black">
+
+</body>
+<script>
+    const Div = document.createElement('div')
+    console.log(Div);
+    Div.className ="hello"
+    Div.id=Math.round(Math.random()*10 +1)  
+    Div.style.backgroundColor="green"
+    Div.style.padding="10px"
+    Div.setAttribute("title","this is new")
+
+    // //important one we will see later
+    // Div.innerText="Abhinav Anand" 
+    const addText = document.createTextNode("Abhinav Anand")//same as previous but we will see in DSA
+    console.log(addText);
+    Div.appendChild(addText); // add the textNode in Div
+
+    document.body.appendChild(Div) // document m body ko bola ki Div ko add kar de
+
+
+    /* after doing this we can now add a function on this div, by making a function
+    and then using loops we can manipulate it by own choice */
+
+</script>
+</html>
