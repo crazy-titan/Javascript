@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="language">
+        <li>Javascript</li>
+    </div>
+</body>
+<script>
+    /* not good for use */
+
+    // function addLanguage(language){
+    //     const newLang = document.createElement('li');
+    //     newLang.innerHTML = `${language}`
+    //     document.querySelector('.language').appendChild(newLang)
+    // }
+    // addLanguage("python")
+
+    /* good for use, more optimize and easy for large data */
+
+    function addLang(language){
+        const li = document.createElement('li');
+        const hey = document.createTextNode(language)
+        li.appendChild(hey)
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang('hey')
+    addLang('hello')
+
+    // Edit
+    const secLang = document.querySelector("li:nth-child(2)")  // reference bna liya
+    const lang = document.createElement('li')
+    //lang.innerHTML = "jk" or lang.outerHTML = "<li>jk</li>" // don't use bro
+    lang.textContent = "jk" // sometimes use it 
+    secLang.replaceWith(lang) // replace is important 
+
+    //remove
+    const firstLang = document.querySelector("li:nth-child(1)")
+    firstLang.remove()
+
+</script>
+</html>
